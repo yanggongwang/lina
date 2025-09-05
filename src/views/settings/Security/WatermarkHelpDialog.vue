@@ -8,7 +8,7 @@
     top="1vh"
     width="50%"
   >
-    <p>{{ $t('WatermarkVariableHelpText') }}</p>
+    <p>{{ variablesHelpText }}</p>
     <table border="1" class="help-table">
       <tr>
         <th>{{ $tc('Variable') }}</th>
@@ -42,6 +42,12 @@ export default {
     variables: {
       type: Array,
       default: () => []
+    },
+    variablesHelpText: {
+      type: String,
+      default() {
+        return this.$t('WatermarkVariableHelpText')
+      }
     }
   },
   data() {
